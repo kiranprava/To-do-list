@@ -48,13 +48,15 @@ listContainer.addEventListener("click", function(e){
         let listText=listItem.querySelector(".editable")
 
        listText.contentEditable=!listText.isContentEditable
-        if(listText.contentEditable){
+       
+        if(listText.contentEditable === 'true'){
             e.target.innerText="save"
           
             e.target.style.fontSize='12px'
             listText.focus()
         }
         else{
+          console.log("hello ");
             saveTask()
             e.target.innerText = "\u270E"
             
